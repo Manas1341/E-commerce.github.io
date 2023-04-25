@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .brand-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .brand-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .brand-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .brand-item:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brand-container">
+        <h2>Brands</h2>
+        <ul class="brand-list">
+            <a href="nike.html"><li class="brand-item" data-brand="nike"> Nike</li></a>
+            <li class="brand-item" data-brand="adidas">Adidas</li>
+            <li class="brand-item" data-brand="puma">Puma</li>
+            <li class="brand-item" data-brand="Reebok">Reebok</li>
+        </ul>
+    </div>
+
+    <script>
+        const brandItems = document.querySelectorAll('.brand-item');
+
+        brandItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const brand = item.dataset.brand;
+                console.log(`Selected brand: ${brand}`);
+                // Add code to filter products by brand
+            });
+        });
+
+    </script>
+</body>
+
+</html>

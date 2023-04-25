@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .category-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .category-item:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="category-container">
+        <h2>Categories</h2>
+        <ul class="category-list">
+            <li class="category-item" data-category="electronics">Electronics</li>
+            <li class="category-item" data-category="clothing">Clothing</li>
+            <li class="category-item" data-category="home-garden">Home & Garden</li>
+            <li class="category-item" data-category="beauty">Beauty</li>
+        </ul>
+    </div>
+    <script>
+        const categoryItems = document.querySelectorAll('.category-item');
+
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const category = item.dataset.category;
+                console.log(`Selected category: ${category}`);
+                // Add code to filter products by category
+            });
+        });
+
+    </script>
+</body>
+
+</html>

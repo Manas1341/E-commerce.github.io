@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .deals {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .deal-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .deal {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .deal img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .deal h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .deal p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="deals">
+        <h2>Deals of the Day</h2>
+        <div class="deal-container">
+            <div class="deal">
+                <img src="/img/bat.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>50% off</p>
+            </div>
+            <div class="deal">
+                <img src="/img/batsman gloves.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>30% off</p>
+            </div>
+            <div class="deal">
+                <img src="/img/red ball.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>20% off</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const deals = [
+          {
+            name: "Product 1",
+            discount: 50
+          },
+          {
+            name: "Product 2",
+            discount: 30
+          },
+          {
+            name: "Product 3",
+            discount: 20
+          }
+        ];
+      
+        const dealContainer = document.querySelector(".deal-container");
+      
+        deals.forEach(deal => {
+          const dealDiv = document.createElement("div");
+          dealDiv.classList.add("deal");
+      
+          const dealImage = document.createElement("img");
+          dealImage.src = `${deal.name.toLowerCase()}.jpg`;
+          dealImage.alt = deal.name;
+          dealDiv.appendChild(dealImage);
+      
+          const dealName = document.createElement("h3");
+          dealName.textContent = deal.name;
+          dealDiv.appendChild(dealName);
+      
+          const dealDiscount = document.createElement("p");
+          dealDiscount.textContent = `${deal.discount}% off`;
+          dealDiv.appendChild(dealDiscount);
+      
+          dealContainer.appendChild(dealDiv);
+        });
+      </script>
+      
+
+</body>
+
+</html>
