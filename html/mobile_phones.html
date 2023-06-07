@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h2 {
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            margin: 10px;
+            color: grey;
+        }
+
+        .product-card button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mobile Phones</h1>
+    <div class="product">
+        <div class="product-card">
+            <img src="https://source.unsplash.com/160x160/?Samsung mobiles" alt="Cricket Bat">
+            <h2>Samsung mobiles</h2>
+            <p>Price: Rs88,850</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://source.unsplash.com/160x160/?Apple Mobile phones" alt="Cricket Ball">
+            <h2>Apple Mobile phones</h2>
+            <p>Price: Rs8510</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://source.unsplash.com/160x160/?oppo mobile phones" alt="Cricket Gloves">
+            <h2>oppo mobile phones</h2>
+            <p>Price: Rs7720</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://source.unsplash.com/160x160/?vivo mobile phones" alt="Cricket Pads">
+            <h2>vivo mobile phones</h2>
+            <p>Price: Rs11,730</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</body>
+
+</html>
